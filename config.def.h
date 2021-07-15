@@ -60,6 +60,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "qterminal", NULL };
 static const char *volup[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldn[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *prntscrn[] = { "/usr/bin/scrot", "%Y-%m-%d_%H-%M-%S_$wx$h.png", "-e 'mv $f /home/$USER/screenshots/'", NULL };
 
 static Key keys[] = {
     /* modifier, key, function, argument */
@@ -88,6 +89,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_period, tagmon, {.i = +1 } },
     { 0, XF86XK_AudioRaiseVolume, spawn, {.v = volup } },
     { 0, XF86XK_AudioLowerVolume, spawn, {.v = voldn } },
+    { 0, XK_Print, spawn, {.v = prntscrn } },
     TAGKEYS( XK_1, 0)
     TAGKEYS( XK_2, 1)
     TAGKEYS( XK_3, 2)
