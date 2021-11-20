@@ -1,6 +1,10 @@
 //Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+    {"WIFI:", "cat /sys/class/net/wlan0/operstate", 10, 0},
+
+    {"WLAN:", "cat /sys/class/net/wlan0/operstate", 10, 0},
+
     {"MEM:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30,	0},
 
     {"", "date '+%d/%m/%y'", 0, 0},
