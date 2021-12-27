@@ -65,7 +65,7 @@ static const Layout layouts[] = {
 
 
 /* Key Definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY, TAG) \
     { MODKEY, KEY, view, {.ui = 1 << TAG} }, \
     { MODKEY|ControlMask, KEY, toggleview, {.ui = 1 << TAG} }, \
@@ -110,7 +110,12 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_l, spawn, {.v = lockscrn } },
     { 0, XF86XK_AudioRaiseVolume, spawn, {.v = volup } },
     { 0, XF86XK_AudioLowerVolume, spawn, {.v = voldn } },
+    /* alt vol keys */
+    { MODKEY|ShiftMask, XK_F11, spawn, {.v = volup } },
+    { MODKEY|ShiftMask, XK_F12, spawn, {.v = voldn } },
     { 0, XK_Print, spawn, {.v = prntscrn } },
+    /* alt prnt scrn key */
+    { MODKEY|ShiftMask, XK_F10, spawn, {.v = prntscrn } },
     TAGKEYS( XK_1, 0)
     TAGKEYS( XK_2, 1)
     TAGKEYS( XK_3, 2)
