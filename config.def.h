@@ -111,8 +111,8 @@ static Key keys[] = {
     { 0, XF86XK_AudioRaiseVolume, spawn, {.v = volup } },
     { 0, XF86XK_AudioLowerVolume, spawn, {.v = voldn } },
     /* alt vol keys */
-    { MODKEY|ShiftMask, XK_F11, spawn, {.v = volup } },
-    { MODKEY|ShiftMask, XK_F12, spawn, {.v = voldn } },
+    { MODKEY|ShiftMask, XK_F11, spawn, {.v = voldn } },
+    { MODKEY|ShiftMask, XK_F12, spawn, {.v = volup } },
     { 0, XK_Print, spawn, {.v = prntscrn } },
     /* alt prnt scrn key */
     { MODKEY|ShiftMask, XK_F10, spawn, {.v = prntscrn } },
